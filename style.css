@@ -1,0 +1,359 @@
+body,html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: aliceblue;
+    overflow: hidden;
+}
+
+
+top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 4rem;
+}
+
+.input {
+    border: 1px solid white;
+    padding: .3rem .7rem;
+    border-radius: .5rem;
+}
+
+.fa-magnifying-glass {
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+
+input {
+    border: none;
+    outline: none;
+    background-color: black;
+    color: aliceblue;
+    width: 300px;
+}
+
+span {
+    color: rgb(235, 74, 74);
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nb {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.classify {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    align-items: center;
+}
+
+.classify h4:hover {
+    cursor: pointer;
+    border-bottom: 2px solid rgb(235, 74, 74);
+    margin:0;
+}
+
+.superherocontent {
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+}
+
+.powerstats {
+    display: flex;
+    justify-content: space-between;
+    width: 770px;
+    box-shadow: 0 0 5px rgb(62, 58, 58);
+    padding: .2rem .9rem;
+}
+
+
+em {
+    color: rgb(242, 184, 108);
+}
+
+#biography2 {
+    display: none;
+}
+
+#bio {
+    width:100%;
+    display: none;
+}
+
+.bio {
+    display: flex;
+    justify-content: space-between;
+    width: 770px;
+    align-items: center;
+    box-shadow: 0 0 5px rgb(62, 58, 58);
+    padding: 1rem .9rem;
+}
+
+#appear {
+  display: none;
+}
+
+#appearance2 {
+    width: 100%;
+    display: none;
+}
+
+.appear {
+    display: flex;
+    justify-content: space-between;
+    width: 770px;
+    box-shadow: 0 0 5px rgb(62, 58, 58);
+    padding: 1rem .9rem;
+    align-items: center;
+}
+
+
+
+#connect {
+    display: none;
+}
+
+
+#connections2 {
+    width: 100%;
+    display: none;
+}
+
+.connect {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgb(62, 58, 58);
+    width: 770px;
+    padding: 1rem .9rem;
+    align-items: center;
+}
+
+.connect em {
+    width: 500px;
+}
+
+
+
+
+@media screen and (max-width:568px) {
+    body,html {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: aliceblue;
+        }
+
+        top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .4rem 2rem;
+        }
+
+        top h1 {
+            font-size: 15px;
+        }
+    
+        .input {
+            border: 1px solid white;
+            padding: .1rem .3rem;
+            border-radius: .5rem;
+        }
+    
+        .fa-magnifying-glass {
+            font-size: .5rem;
+            cursor: pointer;
+        }
+    
+    
+        input {
+            border: none;
+            outline: none;
+            background-color: black;
+            color: aliceblue;
+            width: 110px;
+        }
+
+        ::placeholder {
+            font-size: 8px;
+        }
+    
+        span {
+            color: rgb(235, 74, 74);
+        }
+
+        #img {
+            width: 120px;
+            height: 200px;
+            position: absolute;
+            top:10%;
+            left: 3%;
+        }
+
+        #image {
+            width: 130px;
+            height: 200px;
+            position: absolute;
+            top: 10%;
+            left: 3%;
+        }
+    
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 10px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 3rem;
+        }
+    
+        .nb {
+            font-size: 6px;
+            letter-spacing: 1.5px;
+            font-weight: bolder;
+            font-style: italic;
+            width: 150px;
+        }
+    
+        .classify {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            align-items: center;
+            margin-left: 3rem;
+        }
+
+        .classify h4 {
+            font-size: 6px;
+        }
+    
+        .classify h4:hover {
+            cursor: pointer;
+            border-bottom: 2px solid rgb(235, 74, 74);
+            margin: 0;
+        }
+    
+        .superherocontent {
+            display: flex;
+            justify-content: space-between;
+            height: 60vh;
+        }
+    
+        .powerstats {
+            display: flex;
+            justify-content: space-between;
+            width: 170px;
+            box-shadow: 0 0 5px rgb(62, 58, 58);
+            padding: .2rem .9rem;
+            margin-left: 3rem;
+        }
+
+        .powerstats p {
+            font-size: 5px;
+            font-weight: bolder;
+        }
+    
+    
+        em {
+            color: rgb(242, 184, 108);
+            font-size: 5px;
+        }
+    
+        #biography2 {
+            display: none;
+        }
+    
+        #bio {
+            width: 100%;
+            display: none;
+        }
+    
+        .bio {
+            display: flex;
+            justify-content: space-between;
+            width: 170px;
+            box-shadow: 0 0 5px rgb(62, 58, 58);
+            padding: .2rem .9rem;
+            margin-left: 3rem;
+        }
+
+        .bio p {
+            font-size: 5px;
+            font-weight: bolder;
+        }
+    
+        #appear {
+            display: none;
+        }
+    
+        #appearance2 {
+            width: 100%;
+            display: none;
+        }
+    
+        .appear {
+            display: flex;
+            justify-content: space-between;
+            width: 170px;
+            box-shadow: 0 0 5px rgb(62, 58, 58);
+            padding: .2rem .9rem;
+            margin-left: 3rem;
+        }
+
+        .appear p {
+            font-size: 5px;
+            font-weight: bolder;
+        }
+    
+        #connect {
+            display: none;
+        }
+    
+    
+        #connections2 {
+            width: 100%;
+            display: none;
+        }
+    
+        .connect {
+            display: flex;
+            justify-content: space-between;
+            width: 170px;
+            box-shadow: 0 0 5px rgb(62, 58, 58);
+            padding: .2rem .9rem;
+            margin-left: 3rem;
+        }
+    
+        .connect em {
+            width: 90px;
+        }
+
+        .connect p {
+            font-size: 5px;
+            font-weight: bolder;
+        }
+}
