@@ -27,7 +27,7 @@ function Superhero(){
     .then(data => {
        const hero = data.results[0]
         console.log(hero.connections)
-        imgEL.innerHTML = `<img src=${hero.image.url} width="120px" height="220px" />`
+        imgEL.innerHTML = `<img src=${hero.image.url} width="380px" id="image" />`
         heroName.innerHTML = `<h2 id="superheroname">${hero.name}</h2>`
         image.style.display = "none";
         powerInfo.style.display = "none";
