@@ -54,6 +54,13 @@ span {
     font-style: italic;
 }
 
+button {
+    border: none;
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+}
+
 .classify {
     display: flex;
     justify-content: space-between;
