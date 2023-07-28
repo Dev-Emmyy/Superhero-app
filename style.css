@@ -1,367 +1,237 @@
-body,html {
+body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     color: aliceblue;
-    overflow: hidden;
-    position: relative;
+    width: 100%;
 }
 
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
 
-top {
+.navContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 4rem;
+    margin: 20px 30px;
 }
 
-.input {
-    border: 1px solid white;
-    padding: .3rem .7rem;
-    border-radius: .5rem;
+.navContainer span {
+    color: #ff6600;
 }
 
-.fa-magnifying-glass {
-    font-size: .8rem;
-    cursor: pointer;
+.inputSection {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
 }
-
 
 input {
-    border: none;
     outline: none;
-    background-color: black;
-    color: aliceblue;
-    width: 300px;
+    border: none;
+    color: black;
+    font-weight: bold;
 }
 
-span {
-    color: rgb(235, 74, 74);
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.nb {
-    font-size: 10px;
-    letter-spacing: 1.5px;
+input::placeholder {
     font-weight: bolder;
-    font-style: italic;
+    font-size: 16px;
 }
 
 button {
-    border: none;
+    font-size: 14px;
+    outline: none;
     background-color: black;
-    color: aliceblue;
+    color: #fff;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.classify {
+
+.infoContainer {
     display: flex;
     justify-content: space-between;
-    width: 800px;
-    align-items: center;
+    margin: 0px 30px;
+    width: fit-content;
 }
 
-.classify h4:hover {
+.infoContainer img {
+    border-radius: 15px;
+}
+
+.superHeroContainer h1 {
+    margin-left: 20px;
+}
+
+.abilities_info {
+    margin-left: 20px;
+}
+
+
+.tab_titles {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    margin: 20px 0px 0px 0px;
+    padding: 0px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.tab_links {
+    margin-right: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
     cursor: pointer;
-    border-bottom: 2px solid rgb(235, 74, 74);
-    margin:0;
+    position: relative;
+    color: #fff;
 }
 
-.superherocontent {
-    display: flex;
-    justify-content: space-between;
-    height: 60vh;
+.tab_links::after {
+    content: "";
+    background-color: #989ea3;
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -6px;
+    transition: .5s;
 }
 
-.powerstats {
-    display: flex;
-    justify-content: space-between;
-    width: 770px;
-    box-shadow: 0 0 5px rgb(62, 58, 58);
-    padding: .2rem .9rem;
+.tab_links.active_link::after {
+    width: 50%;
 }
 
-
-em {
-    color: rgb(242, 184, 108);
-}
-
-#biography2 {
+.tab_contents {
     display: none;
 }
 
-#bio {
-    width:100%;
-    display: none;
+.active_tab {
+    display: block;
 }
 
-.bio {
-    display: flex;
-    justify-content: space-between;
-    width: 770px;
-    align-items: center;
-    box-shadow: 0 0 5px rgb(62, 58, 58);
-    padding: 1rem .9rem;
+#heroName {
+    text-transform: uppercase;
+    font-family: "Arial", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff6600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #000;
 }
 
-#appear {
-  display: none;
+.heroMainContainer {
+    margin: 0px 20px;
 }
 
-#appearance2 {
-    width: 100%;
-    display: none;
+.heroContainer {
+   display: flex;
+   justify-content: space-between;
+   box-shadow: 0 0 5px rgb(62, 58, 58);
+   padding: 0px 10px;
+   text-transform: uppercase;
+   color: aliceblue;
+   font-weight: lighter;
+   font-size: 17px;
 }
 
-.appear {
-    display: flex;
-    justify-content: space-between;
-    width: 770px;
-    box-shadow: 0 0 5px rgb(62, 58, 58);
-    padding: 1rem .9rem;
-    align-items: center;
-}
-
-
-
-#connect {
-    display: none;
+.heroInfo {
+    font-style: italic;
+    color: #ff6600;
 }
 
 
-#connections2 {
-    width: 100%;
-    display: none;
-}
+@media screen and (max-width: 700px) {
+    body {
+        width: 100%;
+    }
 
-.connect {
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 0 5px rgb(62, 58, 58);
-    width: 770px;
-    padding: 1rem .9rem;
-    align-items: center;
-}
+    .navContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.connect em {
-    width: 500px;
-}
+    .titleContainer h1 {
+        width: 300px;
+    }
 
+    .inputSection {
+        display: flex;
+        gap: 15px;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        justify-self: end;
+        margin-left: auto;
+    }
 
+    input {
+        outline: none;
+        border: none;
+        color: black;
+        font-weight: bold;
+    }
 
+    input::placeholder {
+        font-weight: bolder;
+        font-size: 16px;
+    }
 
-@media screen and (max-width:568px) {
-    body,html {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: black;
-            color: aliceblue;
-        }
+    button {
+        font-size: 16px;
+        width: 150px;
+        outline: none;
+        background-color: black;
+        color: #fff;
+        border: none;
+        padding: 8px 5px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 
-        top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: .4rem 2rem;
-        }
+    .infoContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+    }
 
-        top h1 {
-            font-size: 15px;
-        }
-    
-        .input {
-            border: 1px solid white;
-            padding: .1rem .3rem;
-            border-radius: .5rem;
-        }
-    
-        .fa-magnifying-glass {
-            font-size: .5rem;
-            cursor: pointer;
-        }
-    
-    
-        input {
-            border: none;
-            outline: none;
-            background-color: black;
-            color: aliceblue;
-            width: 110px;
-        }
+    .tab_titles {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 20px 0px 0px 0px;
+        padding: 0px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    }
 
-        ::placeholder {
-            font-size: 8px;
-        }
-    
-        span {
-            color: rgb(235, 74, 74);
-        }
+    .tab_links {
+        margin-right: 10px;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        color: #fff;
+    }
 
-        #img {
-            width: 120px;
-            height: 200px;
-            position: absolute;
-            top:10%;
-            left: 3%;
-        }
-
-        #image {
-            width: 130px;
-            height: 200px;
-            position: absolute;
-            top: 10%;
-            left: 3%;
-        }
-    
-        .container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        h2 {
-            font-size: 10px;
-        }
-
-        .info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-left: 3rem;
-        }
-    
-        .nb {
-            font-size: 6px;
-            letter-spacing: 1.5px;
-            font-weight: bolder;
-            font-style: italic;
-            width: 150px;
-        }
-    
-        .classify {
-            display: flex;
-            justify-content: space-between;
-            width: 200px;
-            align-items: center;
-            margin-left: 3rem;
-        }
-
-        .classify h4 {
-            font-size: 6px;
-        }
-    
-        .classify h4:hover {
-            cursor: pointer;
-            border-bottom: 2px solid rgb(235, 74, 74);
-            margin: 0;
-        }
-    
-        .superherocontent {
-            display: flex;
-            justify-content: space-between;
-            height: 60vh;
-        }
-    
-        .powerstats {
-            display: flex;
-            justify-content: space-between;
-            width: 170px;
-            box-shadow: 0 0 5px rgb(62, 58, 58);
-            padding: .2rem .9rem;
-            margin-left: 3rem;
-        }
-
-        .powerstats p {
-            font-size: 5px;
-            font-weight: bolder;
-        }
-    
-    
-        em {
-            color: rgb(242, 184, 108);
-            font-size: 5px;
-        }
-    
-        #biography2 {
-            display: none;
-        }
-    
-        #bio {
-            width: 100%;
-            display: none;
-        }
-    
-        .bio {
-            display: flex;
-            justify-content: space-between;
-            width: 170px;
-            box-shadow: 0 0 5px rgb(62, 58, 58);
-            padding: .2rem .9rem;
-            margin-left: 3rem;
-        }
-
-        .bio p {
-            font-size: 5px;
-            font-weight: bolder;
-        }
-    
-        #appear {
-            display: none;
-        }
-    
-        #appearance2 {
-            width: 100%;
-            display: none;
-        }
-    
-        .appear {
-            display: flex;
-            justify-content: space-between;
-            width: 170px;
-            box-shadow: 0 0 5px rgb(62, 58, 58);
-            padding: .2rem .9rem;
-            margin-left: 3rem;
-        }
-
-        .appear p {
-            font-size: 5px;
-            font-weight: bolder;
-        }
-    
-        #connect {
-            display: none;
-        }
-    
-    
-        #connections2 {
-            width: 100%;
-            display: none;
-        }
-    
-        .connect {
-            display: flex;
-            justify-content: space-between;
-            width: 170px;
-            box-shadow: 0 0 5px rgb(62, 58, 58);
-            padding: .2rem .9rem;
-            margin-left: 3rem;
-        }
-    
-        .connect em {
-            width: 90px;
-        }
-
-        .connect p {
-            font-size: 5px;
-            font-weight: bolder;
-        }
+    .heroContainer {
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 0 5px rgb(62, 58, 58);
+        padding: 0px 10px;
+        text-transform: uppercase;
+        color: aliceblue;
+        font-weight: lighter;
+        font-size: 13px;
+    }
 }

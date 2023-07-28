@@ -9,123 +9,223 @@
     <title>Hero App</title>
 </head>
 <body>
-    <top>
-        <h1>Super<span>Hero</span>💪</h1>
-        <div class="input">
-            <input id="searchhero" type="text" placeholder="Search for your superhero...."/>
-            <button id="searchbtn"><i class="fa-solid fa-magnifying-glass" ></i></button>
-        </div>
-    </top>
+    <div class="mainContainer">
 
-    <div class="container">
-    <div>
-        <img src="./Batman.jpg" width="380px" id="img" />
-    </div>
-    <div id="image"></div>
-        <div class="contain">
-           <div class="info">
-            <h2 id="superheroname">BATMAN</h2>
-            <p class="nb">Note:if superhero information is empty,do search for a new hero,using the search box 👆</p>
-           </div>
-           <div >
-            <div class="classify">
-                <div>
-                    <h4 id="powerstats">POWERSTATS</h4>
-                </div>
-                <div>
-                    <h4 id="biography">BIOGRAPHY</h4>
-                </div>
-                
-                <div>
-                    <h4 id="appearance">APPEARANCE</h4>
-                </div>
-                
-                <div>
-                    <h4 id="connections">CONNECTIONS</h4>
-                </div>
+        <nav class="navContainer">
+            <div class="titleContainer">
+                <h1>Super<span>hero💪</span></h1>
             </div>
+            <div class="inputSection">
+                <input type="text" id="heroSearchInput" placeholder="Search for your hero">
+                <button id="btn">Get SuperHero</button>
+            </div>
+        </nav>
+
+        <div class="infoContainer">
+            <div>
+                <img src="./phoenix.jpg" id="img" alt="hero-img" width="400px" height="510px">
+            </div>
+
+            <div class="superHeroContainer">
+                <h1 id="heroName">Phoenix</h1>
+                <em class="abilities_info">The Superhero abilities 👇</em>
+                <div class="tab_titles">
+                    <p class="tab_links active_link" onclick="opentab(event,'powerstats')">Powerstats</p>
+                    <p class="tab_links" onclick="opentab(event,'biography')">Biography</p>
+                    <p class="tab_links" onclick="opentab(event,'apperance')">Apperance</p>
+                    <p class="tab_links" onclick="opentab(event,'connections')">Connections</p>
+                </div>
             
-
-            <div class="superherocontent">
-                <div id="power"></div>
-                <div id="powerinfo">
-                <div class="powerstats">
-                    <p>INTELLIGENCE</p>
-                    <p><em>100</em></p>
+                <div class="tab_contents active_tab" id="powerstats">
+                   
+                   <div class="heroMainContainer">
+                        <div class="heroContainer">
+                            <p>Intelligence</p>
+                            <p id="intelligence" class="heroInfo">100</p>
+                        </div>
+                        <div class="heroContainer">
+                            <p>Strength</p>
+                            <p id="strength" class="heroInfo">100</p>
+                        </div>
+                        <div class="heroContainer">
+                            <p>Speed</p>
+                            <p id="speed" class="heroInfo">83</p>
+                        </div>
+                        <div class="heroContainer">
+                            <p>Durability</p>
+                            <p id="durability" class="heroInfo">100</p>
+                        </div>
+                        <div class="heroContainer">
+                            <p>Power</p>
+                            <p id="power" class="heroInfo">100</p>
+                        </div>
+                        <div class="heroContainer">
+                            <p>Combat</p>
+                            <p id="combat" class="heroInfo">80</p>
+                        </div>
+                   </div>
                 </div>
-                <div class="powerstats">
-                    <p>STRENGTH</p>
-                    <p><em>26</em></p>
-                </div>
-                <div class="powerstats">
-                    <p>SPEED</p>
-                    <p><em>27</em></p>
-                </div>
-                <div class="powerstats">
-                    <p>DURABILITY</p>
-                    <p><em>50</em></p>
-                </div>
-                <div class="powerstats">
-                    <p>POWER</p>
-                    <p><em>47</em></p>
-                </div>
-                <div class="powerstats">
-                    <p>COMBAT</p>
-                    <p><em>100</em></p>
-                </div>
-                </div>
-                
-
-                <div id="biography2">
-                    <div class="bio">
-                        <p>FULL-NAME</p>
-                        <em>Terry McGinnis</em>
+            
+                <div class="tab_contents" id="biography">
+                    <div class="heroMainContainer">
+                        <div class="heroContainer">
+                            <p>Full-Name</p>
+                            <p id="name" class="heroInfo">JEAN GREY</p>
+                        </div>
+                        <div class="heroContainer">
+                            <p>Aliases</p>
+                            <p id="aliases" class="heroInfo">REDD DAYSPRING</p>
+                        </div>
                     </div>
-                    <div class="bio">
-                        <p>ALIASES</p>
-                        <em>Batman II</em>
+                </div>
+            
+                <div class="tab_contents" id="apperance">
+                    <div class="heroMainContainer">
+                        <div class="heroContainer">
+                            <p>Gender</p>
+                            <p id="gender" class="heroInfo">FEMALE</p>
+                        </div>
+                        <div class="heroContainer">
+                            <p>Race</p>
+                            <p id="race" class="heroInfo">MUTANT</p>
+                        </div>
+                        <div class="heroContainer">
+                            <p>Height</p>
+                            <p id="height" class="heroInfo">5'6, 168CM</p>
+                        </div>
                     </div>
                 </div>
-                <div id="bio"></div>
-               
 
-                <div id="appearance2"></div>
-                <div id="appear">
-                <div class="appear">
-                    <p>GENDER</p>
-                    <em>Male</em>
+                <div class="tab_contents" id="connections">
+                   <div class="heroMainContainer">
+                        <div class="heroContainer">
+                            <p>Group-Affliations</p>
+                            <p id="affliations" class="heroInfo">CLAN REBELLION</p>
+                        </div>
+                        <div class="heroContainer">
+                            <p>Relatives</p>
+                            <p id="relatives" class="heroInfo">RACHEL SUMMERS (DAUGHTER FROM AN ALTERNATE UNIVERSE)</p>
+                        </div>
+                   </div>
                 </div>
-                <div class="appear">
-                    <p>RACE</p>
-                    <em>Human</em>
-                </div>
-                <div class="appear">
-                    <p>HEIGHT</p>
-                    <em>5'10</em>
-                </div>
-                </div>
-
-                
-                <div id="connect">
-                <div class="connect">
-                    <p>GROUP-AFFLIATION</p>
-                    <em>Batman Family, Justice League Unlimited</em>
-                </div>
-                <div class="connect">
-                    <p>RELATIVES</p>
-                    <em>Bruce Wayne (biological father), Warren McGinnis (father, deceased)</em>
-                </div>
-                </div>
-                <div id="connections2"></div>
-               
-
             </div>
-
-           
-
-           </div>
         </div>
+
     </div>
-    <script src="/script.js"></script>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab_links")
+            var tabcontents = document.getElementsByClassName("tab_contents")
+
+            function opentab(event, tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active_link");
+                }
+
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active_tab");
+                }
+
+                event.currentTarget.classList.add("active_link");
+                document.getElementById(tabname).classList.add("active_tab")
+            }
+        
+
+
+      const getSuperHeroButton = document.getElementById("btn");
+      const heroImage = document.getElementById("img");
+      const heroName = document.getElementById("heroName");
+      const heroIntelligence = document.getElementById("intelligence");
+      const heroStrength = document.getElementById("strength");
+      const heroSpeed = document.getElementById("speed");
+      const heroDurability = document.getElementById("durability");
+      const heroPower = document.getElementById("power");
+      const heroCombat = document.getElementById("combat");
+      const herofullName = document.getElementById("name");
+      const heroAliases = document.getElementById("aliases");
+      const heroGender = document.getElementById("gender");
+      const heroRace = document.getElementById("race");
+      const heroHeight = document.getElementById("height");
+      const heroAffliation = document.getElementById("affliations");
+      const heroRelatives = document.getElementById("relatives");
+    
+      
+
+      getSuperHeroButton.addEventListener("click", async () => {
+
+            const heroSearchInput = document.querySelector('input[type="text"]').value.trim();
+
+            // Check if the user entered a hero name before making the request
+            if (heroSearchInput === "") {
+                alert("Please enter a hero name to search.");
+                return;
+            }
+
+            const url = `https://superhero-search.p.rapidapi.com/api/?hero=${encodeURIComponent(heroSearchInput)}`;
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '31cbf639c0mshc14b3ff2fb72790p1d547fjsnd540bb36b26c',
+                    'X-RapidAPI-Host': 'superhero-search.p.rapidapi.com'
+                }
+            };
+
+            try {
+                const response = await fetch(url, options);
+                const data = await response.json();
+                console.log("API Response:", data);
+
+
+                // Check if the API returned data for the hero
+                  if (data && data.name) {
+                    const hero = data;
+
+                    // Update UI with superhero information
+                    heroName.textContent = hero.name;
+                    heroImage.src = hero.images.sm
+
+                    heroIntelligence.textContent = hero.powerstats.intelligence;
+                    heroStrength.textContent = hero.powerstats.strength;
+                    heroSpeed.textContent = hero.powerstats.speed;
+                    heroDurability.textContent = hero.powerstats.durability;
+                    heroPower.textContent = hero.powerstats.power;
+                    heroCombat.textContent = hero.powerstats.combat;
+
+                    herofullName.textContent = hero.biography.fullName;
+                    heroAliases.textContent = hero.biography.aliases[0];
+                    
+                    heroGender.textContent = hero.appearance.gender;
+                    heroRace.textContent = hero.appearance.race;
+                    heroHeight.textContent = hero.appearance.height.join(", ");
+                    const affiliationsArray = hero.connections.groupAffiliation.split(/[,;]/).map(item => item.trim()).filter(item => item !== '');
+                    heroAffliation.textContent = affiliationsArray[1];
+
+                    const relativesArray = hero.connections.relatives.split(/[,;]/).map(item => item.trim()).filter(item => item !== '');
+                    heroRelatives.textContent = relativesArray[0];
+
+
+
+                   
+                } else {
+                    alert("Superhero not found. Please try a different name.");
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        });
+
+       
+                
+               
+
+
+
+        
+    </script>
 </body>
 </html>
+
+
+
